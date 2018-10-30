@@ -1,0 +1,31 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: service-tutbine
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-methods: "*"
+        allowed-origins: "*"
+turbine:
+  app-config: service-feign,service-ribbon
+  aggregator:
+    cluster-config: default
+  cluster-name-expression: new String("default")
+  combine-host-port: true
+  instanceUrlSuffix:
+      default: /actuator/hystrix.stream
+      #http://localhost:8088/hystrix  打开图形化界面
+      #http://localhost:8088/turbine.stream  在地址栏输入此地址 用于监控各个服务的总体 此地址为全部监控由turbine 完成
+      #http://localhost:8083/actuator/hystrix.stream  此地址为单个服务监控的情况
+      #http://localhost:8084/actuator/hystrix.stream  此地址为单个服务监控情况
+
+#用于聚合所有服务的Hystrix Dashboard的数据

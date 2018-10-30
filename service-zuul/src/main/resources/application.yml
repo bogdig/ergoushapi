@@ -1,0 +1,27 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: service-zuul
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+      #在工程的配置文件指定服务的注册中心地址为http://localhost:8080/eureka/
+
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: service-ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: service-feign
+
+
+#用于路由转发并且由过滤器的作用
+
+
+

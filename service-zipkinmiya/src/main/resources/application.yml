@@ -1,0 +1,8 @@
+server:
+  port: 8087
+spring:
+  application:
+    name: service-zipkinmiya
+  zipkin:
+    base-url: http://localhost:9411 #指定zipkin server的地址
+    enabled: true

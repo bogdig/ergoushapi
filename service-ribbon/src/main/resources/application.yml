@@ -1,0 +1,22 @@
+server:
+  port: 8083
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+      #在工程的配置文件指定服务的注册中心地址为http://localhost:8080/eureka/
+
+spring:
+  application:
+    name: service-ribbon
+management:
+  endpoints:
+    web:
+      cors:
+        allowed-methods: "*"
+        allowed-origins: "*"
+      exposure:
+        include: "*"
+
+#服务消费者ribbon，同样可以用于集群服务

@@ -1,0 +1,12 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: service-zipkinhi
+  zipkin:
+    base-url: http://localhost:9411#指定zipkin server的地址
+    enabled: true
+
+
+#用于链路追踪此服务和service-zipkinmiya服务的通讯都可以通过spring cloud sleuth来追踪，其中sleuth集成了zipkin，
+#使用链路追踪前需要先启动zipkin-server-2.10.1-exec.jar（此文件在下载文件夹中）

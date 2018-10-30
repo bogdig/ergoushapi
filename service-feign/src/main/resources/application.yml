@@ -1,0 +1,30 @@
+server:
+  port: 8084
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+      #在工程的配置文件指定服务的注册中心地址为http://localhost:8080/eureka/
+
+spring:
+  application:
+    name: service-feign
+
+feign.hystrix.enabled: true #开启feign的熔断功能
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-methods: "*"
+        allowed-origins: "*"
+
+#服务消费者，并且feign，可用于集群，不再通过IP来链接而是通过服务名称，feign中集成了ribbon
+#其中Hystrix用于熔断降级，断路等防止系统雪崩，ribbon中同样
+#断路起监控，使得断路器可以界面化
+
+
+
