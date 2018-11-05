@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/eureka-client/eureka-client.iml" filepath="$PROJECT_DIR$/eureka-client/eureka-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-feign/service-feign.iml" filepath="$PROJECT_DIR$/service-feign/service-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-gateway/service-gateway.iml" filepath="$PROJECT_DIR$/service-gateway/service-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-ribbon/service-ribbon.iml" filepath="$PROJECT_DIR$/service-ribbon/service-ribbon.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-turbine/service-turbine.iml" filepath="$PROJECT_DIR$/service-turbine/service-turbine.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-zipkinhi/service-zipkinhi.iml" filepath="$PROJECT_DIR$/service-zipkinhi/service-zipkinhi.iml" />
