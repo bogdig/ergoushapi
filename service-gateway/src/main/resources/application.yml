@@ -1,0 +1,34 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: service-gateway
+  cloud:
+    gateway:
+      routes:
+      - id: 163_route
+        uri: http://www.163.com/
+        predicates:
+        - Path=/163
+      - id: feign
+        uri: http://localhost:8084/hi?name=ergou
+        predicates:
+        - Path=/feign
+      - id: ribbon
+        uri: http://localhost:8083/hi?name=ergou
+        predicates:
+        - Path=/ribbon
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+      #在工程的配置文件指定服务的注册中心地址为http://localhost:8080/eureka/
+
+#logging:
+#  level:
+#    org.springframework.cloud.gateway: TRACE
+#    org.springframework.http.server.reactive: DEBUG
+#    org.springframework.web.reactive: DEBUG
+#    reactor.ipc.netty: DEBUG
