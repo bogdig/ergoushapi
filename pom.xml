@@ -24,6 +24,7 @@
         <module>service-zipkinmiya</module>
         <module>service-zipkinhi</module>
         <module>service-turbine</module>
+        <module>service-gateway</module>
     </modules>
 
     <properties>
